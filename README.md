@@ -97,46 +97,6 @@ A simple RESTful API for managing your personal book collection. This project in
 2. Test both book management and user authentication features.
 
 ---
-
-### **Tasks**
-
-#### **Phase 1: Book Management**
-- Design and implement the Book schema:
-  - Fields: `title`, `author`, `totalPages`, `currentPage`, `notes`, `completed (boolean)`, `createdAt`.
-- Create RESTful routes for managing books.
-- Test routes using Postman.
-- Handle errors (e.g., missing fields, invalid IDs).
-
-#### **Phase 2: Authentication**
-- Install and configure `jsonwebtoken` and `bcryptjs`.
-- Design the User schema with fields: `username`, `email`, `password (hashed)`, `createdAt`.
-- Create authentication routes:
-  - Register users.
-  - Log in users and return JWT tokens.
-- Add middleware to secure book routes.
-
-#### **Phase 3: Input Validation**
-- Use `express-validator` to validate inputs.
-- Add validation for:
-  - Book creation (e.g., `title` and `totalPages` are required).
-  - Updating progress (e.g., `currentPage` must be within range).
-  - User registration (e.g., email format and password strength).
-- Implement global error-handling middleware for better error messages.
-
-#### **Phase 4: Code Optimization**
-- Clean up the codebase.
-- Add comments and documentation for better readability.
-
----
-
-### **Future Improvements**
-- Add user-specific book collections.
-- Implement pagination for fetching books.
-- Add unit tests for all routes.
-- Deploy the application to a cloud platform.
-
----
-
 ### **License**
 This project is licensed under the MIT License.
 
