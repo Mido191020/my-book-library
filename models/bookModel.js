@@ -3,8 +3,8 @@ const bookSchema = new mongoose.Schema({
     title: {
         type: String
     },
-    filePath: {
-        type: String
+    fileId: {
+        type: mongoose.Schema.Types.ObjectId // Store GridFS file ID
     },
     fileName: {
         type: String
@@ -20,7 +20,9 @@ const bookSchema = new mongoose.Schema({
         type: String
     },
     isbn: {
-        type: String
+        type: String,
+        unique: true,
     },
-})
-module.exports=mongoose.model('bookShelf',bookSchema);
+});
+
+module.exports = mongoose.model('bookShelf', bookSchema);

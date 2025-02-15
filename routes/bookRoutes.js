@@ -10,5 +10,6 @@ router.get('/search/author/:author', Controller.findBookAuthor)
 router.get('/search/category/:category', Controller.findBookCategory)
 router.get('/search', Controller.search)
 router.delete('/:id', Controller.deleteBook)
+router.get('/file/:filename', Controller.getFile);
 
 module.exports = router

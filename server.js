@@ -3,6 +3,7 @@ const app = express();
 require('dotenv').config();
 const mongoose = require('mongoose');
 const bookRouter = require('./routes/bookRoutes');
+const path = require('path');
 
 // Get port from env file, fallback to 3000 if not set
 const port = process.env.PORT || 3000;
@@ -25,6 +26,7 @@ mongoose
   });
 
 app.use(express.json());
+app.use('/uploads', express.static(path.join(__dirname, 'controllers/uploads')));
 app.use('/', bookRouter);
 
 app.listen(port, () => {
